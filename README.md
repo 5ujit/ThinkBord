@@ -81,4 +81,4 @@ npm run dev
 
 ✨ Author
 
-Sujit Kumar SrivastavBuilt this project as a learning exercise to gain hands-on experience in full-stack development, backend architecture, and deployment pipelines.
+Sujit Srivastav 
