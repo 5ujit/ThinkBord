@@ -1,11 +1,19 @@
 import express from "express";
+// const express = require("express");
 
 const app = express();
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
-});
+app.get("/api/notes",(req,res)=>{
+ res.status(200).send("Hello from server")
+})
 
-app.get("/", (req, res) => {
-  res.send("Hello, World!");
-}); 
+app.post("/api/notes",(req,res)=>{
+  res.status(201).send("Post request from server")
+ })
+
+app.listen(5006,()=>{
+  console.log("your notes has been created successfully ");
+
+  
+})
+// http://localhost:5001/api/notes
