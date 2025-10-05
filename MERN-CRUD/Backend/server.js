@@ -16,4 +16,3 @@ app.listen(5006,()=>{
 
   
 })
-// http://localhost:5001/api/notes
