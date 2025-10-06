@@ -11,6 +11,9 @@ app.post("/api/notes",(req,res)=>{
   res.status(201).send("Post request from server")
  })
 
+
+app.use(express.json())
+
 app.listen(5006,()=>{
   console.log("your notes has been created successfully ");
 
