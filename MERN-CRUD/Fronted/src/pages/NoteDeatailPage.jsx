@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CreatePage = () => {
+const NoteDeatailPage = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const CreatePage = () => {
   )
 }
 
-export default CreatePage
+export default NoteDeatailPage
