@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from "react-router"
 const Navbar = () => {
   return (
    <header className='bg-base-300 border-b border-base-content/10 '>
@@ -8,7 +8,11 @@ const Navbar = () => {
             <h1 className='text-3xl font-bold text-primary font-mono tracking-tight'> 
                 ThinkBoard
             </h1>
-
+            <div className='flex items-center gap-4'> 
+        <Link to={"/create"} className='btn btn-primary'>
+        <PlusIcon/>
+         </Link>
+            </div>
         </div>
     </div>
    </header>
