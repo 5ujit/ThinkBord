@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from "react-router"
+import {PlusIcon}  from "lucide-react"
 const Navbar = () => {
   return (
    <header className='bg-base-300 border-b border-base-content/10 '>
@@ -11,6 +12,7 @@ const Navbar = () => {
             <div className='flex items-center gap-4'> 
         <Link to={"/create"} className='btn btn-primary'>
         <PlusIcon/>
+        <span> New Notes</span>
          </Link>
             </div>
         </div>
