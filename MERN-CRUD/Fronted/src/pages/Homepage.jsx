@@ -14,7 +14,7 @@ const HomePage = () => {
       console.log(res.data);
     } catch (error) {
       console.log("Error fatching notes");
-    }AudioParamMapq1a
+    }AudioParamMapq1av
   };
   fetchNotes();
  },[])
