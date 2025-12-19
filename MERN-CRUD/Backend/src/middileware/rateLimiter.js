@@ -1,3 +1,9 @@
+const rateLimiter = (req, res, next) => next();
+
+export default rateLimiter;
+
+
+/*
 import { errors } from "@upstash/redis";
 import ratelimit from "../config/upstash.js";
 
@@ -19,6 +25,6 @@ const rateLimiter = async (req, res, next) => {
 };
 export default rateLimiter;
 
-
+*/
 
 //src> middileware>> rateLimiter.js
