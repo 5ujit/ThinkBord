@@ -1,11 +1,13 @@
-import React from 'react'
+import { useEffect } from "react";
+import { useState } from "react";
+import { Link, useNavigate, useParams } from "react-router";
+import api from "../lib/axios";
+import toast from "react-hot-toast";
+import { ArrowLeftIcon, LoaderIcon, Trash2Icon } from "lucide-react";
 
 const NoteDetailPage = () => {
-  return (
-    <div>
-      this is note detail page
-    </div>
-  )
-}
+  const [note, setNote] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
 
-export default NoteDetailPage
+  const navigate = useNavigate();
