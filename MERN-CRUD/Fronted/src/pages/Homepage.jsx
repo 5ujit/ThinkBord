@@ -8,6 +8,7 @@ const HomePage = () => {
   const [isRateLimited, setIsRateLimited] = useState(false);
   const [notes, setNotes] = useState([]);
   const [loading, setLoading] = useState(true);
+ 
   useEffect(() => {
     const fetchNotes = async () => {
       try {
@@ -28,6 +29,7 @@ const HomePage = () => {
     };
     fetchNotes();
   }, []);
+
   return (
     <div className="min-h-screen">
       <Navbar />

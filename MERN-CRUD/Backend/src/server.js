@@ -30,7 +30,7 @@ app.use("/api/notes", notesRoutes);
 connectDB().then(() => {
   app.listen(PORT, () => {
     console.log(`🚀 Server running at http://localhost:${PORT}`);
-    // console.log(`📘 Notes API: http://localhost:${PORT}/api/notes`);
+
   });
 });
 
