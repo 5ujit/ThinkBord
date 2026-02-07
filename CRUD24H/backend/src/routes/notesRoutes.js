@@ -6,14 +6,14 @@ import { getAllNotes,createNotes,updateNotes,deleteNotes } from "../controllers/
 const router = express.Router();
 
 export default router;
-
 router.get("/", getAllNotes);
-
 router.post("/", createNotes);
-
 router.put("/:id", updateNotes);
-
 router.delete("/:id", deleteNotes);
+
+
+
+
 
 /*
 app.get("/api/notes", (req, res) => {
