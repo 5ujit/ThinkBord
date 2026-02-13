@@ -11,6 +11,17 @@ export async function getAllNotes(req, res) {
   }
 }
 
+export async function getNoteById(req,res){
+ try {
+  const NoteById= await Note.findById(req.params.id);
+  if(!NoteById) return res.status(404).join({message: "Note not found"});
+  //  if (!updatedNote) return res.status(404).json({ message: "Note not found" });
+ } catch (error) {
+  
+ }  
+}
+
+
 export async function createNotes(req, res) {
   try {
     const { title, content } = req.body;
@@ -59,8 +70,19 @@ export async function updateNotes(req, res) {
 
 
 
-export function deleteNotes(req, res) {
-  res.status(200).json({ message: "notes Deleted  successfully" });
+export async function deleteNotes(req, res) {
+  try {
+   const deletedNote= await Note.findByIdAndDelete(req.params.id);
+      if(!deletedNote  ) return res.status(404).json({ message: "Note not found" });
+      res.status(200).json({message:"Note deleted successfully"});
+    
+  } catch (error) {
+    console.error("Error in deletNote controller ", error );;
+    res.status(500).json({message: "Internal server error"})
+    
+  }
 }
+
+
 
 //backend>src> controllers>file notesController.js
