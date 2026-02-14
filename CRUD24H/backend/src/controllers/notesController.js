@@ -13,10 +13,14 @@ export async function getAllNotes(req, res) {
 
 export async function getNoteById(req,res){
  try {
-  const NoteById= await Note.findById(req.params.id);
-  if(!NoteById) return res.status(404).join({message: "Note not found"});
-  //  if (!updatedNote) return res.status(404).json({ message: "Note not found" });
+  const note= await Note.findById(req.params.id);
+  if(!note)
+     return res.status(404).json({message: "Note not found"});
+    res.json(note);
+
  } catch (error) {
+  console.error("Error in getNoteById controller", error);
+    res.status(500).json({ message: "Internal server error " });
   
  }  
 }
